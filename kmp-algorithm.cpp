@@ -11,6 +11,16 @@
 #define MAGENTA "\033[35m"
 #define CYAN    "\033[36m"
 
+// So this is KMP algorithm which stands for Knuth-Morris-Pratt algorithm. It is used to find multiple occurrences of a pattern in a text.
+// The time complexity of this current implementation is O(n + m) where n is the length of the text and m is the length of the pattern.
+// The space complexity of this implementation is O(m) where m is the length of the pattern.
+// The space complexity can be reduced to O(1) by using the same text and pattern strings and not using the lps array.
+// The KMP algorithm is based on the concept of the longest proper prefix which is also a suffix.
+// The lps array is used to store the length of the longest proper prefix which is also a suffix for each index of the pattern.
+// The lps array is computed in O(m) time complexity.
+// The search function is used to find the occurrences of the pattern in the text in O(n) time complexity.
+// The printMatches function is used to print the occurrences of the pattern in the text and visualize the pattern matching process.
+
 class KMP {
 private:
     static void printBanner() {
